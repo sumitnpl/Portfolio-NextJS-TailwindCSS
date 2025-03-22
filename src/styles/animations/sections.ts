@@ -17,7 +17,7 @@ export const getSectionAnimation = {
 export const projectVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: 40,
+    y:26,
   },
   show: (i: number) => ({
     opacity: 1,

@@ -10,7 +10,7 @@ const Layout = ({ children, className = '' }: Props) => {
     <>
       <Navbar />
       <main
-        className={`mx-auto px-6 sm:px-8 md:px-28 lg:px-20 xl:px-0 max-w-screen-lg ${className}`}
+        className={`mx-auto px-4 sm:px-6 md:px-26 lg:px-18 xl:px-0 max-w-screen-lg ${className}`}
       >
         {children}
       </main>

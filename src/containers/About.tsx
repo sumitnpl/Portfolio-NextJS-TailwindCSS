@@ -1,6 +1,5 @@
 'use client';
 import { aboutSection } from '@/lib/content/about';
-import { author } from '@/lib/content/portfolio';
 import { getId } from '@/lib/utils/helper';
 
 import { AuthorImage, Link, ListItem, Wrapper } from '@/components';
@@ -10,7 +9,7 @@ import { getSectionAnimation } from '@/styles/animations';
 import { useEffect, useState } from 'react';
 
 const About = () => {
-  const { title, img, list } = aboutSection;
+  const { title, img,backimg,list } = aboutSection;
   // To avoid hydration error
   const [domLoaded, setDomLoaded] = useState(false);
 
@@ -24,7 +23,7 @@ const About = () => {
       <main className="flex flex-col lg:items-start lg:flex-row text-justify">
         <div>
       <h2 className="heading-secondary">{title}</h2>
-        <div className="space-y-3 lg:w-4/5">
+        <div className="space-y-2 lg:w-4/5">
           <p className='text-primary'>
             Hi, my name is Sumit Nepal, a Graduate student from Butwal Multiple Campus, currently working at software company,{' '}
             <Link
@@ -72,7 +71,12 @@ const About = () => {
           )}
         </div>
         </div>
-        <AuthorImage src={img} alt={author.name}  />
+        <AuthorImage
+        frontsrc={img}
+        backsrc={backimg}
+        // size="w-[400px] h-[500px]"
+        alt=""
+      />
       </main>
     </Wrapper>
   ) : (

@@ -24,11 +24,11 @@ const Skill = ({
 }: Props) => {
   return (
     <motion.div
-      className={`flex gap-8 sm:gap-10 flex-col lg:flex-row items-center ${className}`}
+      className={`flex gap-6 sm:gap-8 flex-col lg:flex-row items-center ${className}`}
       {...rest}
     >
       {/* Left */}
-      <div className="space-y-14 lg:w-1/2">
+      <div className="space-y-6 lg:w-1/2">
         <h3 className="mb-5 text-2xl text-center capitalize sm:text-3xl">
           {title}
         </h3>

@@ -1,9 +1,8 @@
 'use client';
-import { heroSection } from '@/lib/content/hero';
 import { aboutSection } from '@/lib/content/about';
+import { heroSection } from '@/lib/content/hero';
 import useWindowWidth from '@/lib/hooks/use-window-width';
 import { getBreakpointsWidth } from '@/lib/utils/helper';
-
 
 import {  AuthorImage, Button, Wrapper } from '@/components';
 
@@ -14,7 +13,7 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   const { cta, subtitle, title, tagline, description, specialText } =
     heroSection;
-    const {  img} = aboutSection;
+    const {  backimg,img} = aboutSection;
 
   const windowWidth = useWindowWidth();
   const md = getBreakpointsWidth('md');
@@ -24,6 +23,7 @@ const Hero = () => {
     DEFAULT_ANIMATION_DELAY + increment * i;
 
   return (
+    <Wrapper className="flex flex-col-2 items-center justify-center gap-16">
     <Wrapper
       id="hero"
       className="flex flex-col justify-center h-full min-h-screen xs:gap-7 xs:mt-0"
@@ -92,6 +92,13 @@ const Hero = () => {
         </Button>
       )}
       
+    </Wrapper>
+    <AuthorImage
+        frontsrc={img}
+        backsrc={backimg}
+        size="w-[380px] h-[380px]"
+        alt=""
+      />
     </Wrapper>
     
   );
