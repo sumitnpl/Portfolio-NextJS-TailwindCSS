@@ -18,12 +18,18 @@ const About = () => {
   }, []);
 
   return domLoaded ? (
-    <Wrapper id="about" {...getSectionAnimation}>
-      
-      <main className="flex flex-col lg:items-start lg:flex-row text-justify">
+    <Wrapper className='justify-center' id="about" {...getSectionAnimation}>
+      <h2 className="heading-secondary my-11">{title}</h2>
+      <main className="flex flex-col lg:items-start justify-center items-center lg:flex-row gap-28">
+      <AuthorImage
+        frontsrc={img}
+        backsrc={backimg}
+        // size="w-[400px] h-[500px]"
+        alt=""
+      />
         <div>
-      <h2 className="heading-secondary">{title}</h2>
-        <div className="space-y-2 lg:w-4/5">
+      
+        <div className="space-y-2 lg:w-4/5 ">
           <p className='text-primary'>
             Hi, my name is Sumit Nepal, a Graduate student from Butwal Multiple Campus, currently working at software company,{' '}
             <Link
@@ -71,12 +77,7 @@ const About = () => {
           )}
         </div>
         </div>
-        <AuthorImage
-        frontsrc={img}
-        backsrc={backimg}
-        // size="w-[400px] h-[500px]"
-        alt=""
-      />
+        
       </main>
     </Wrapper>
   ) : (

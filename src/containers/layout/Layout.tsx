@@ -10,7 +10,9 @@ const Layout = ({ children, className = '' }: Props) => {
     <>
       <Navbar />
       <main
-        className={`mx-auto px-4 sm:px-6 md:px-26 lg:px-18 xl:px-0 max-w-screen-lg ${className}`}
+      
+        className={ 
+           `max-w-screen-lg mx-auto justify-items-center ${className}`}
       >
         {children}
       </main>
