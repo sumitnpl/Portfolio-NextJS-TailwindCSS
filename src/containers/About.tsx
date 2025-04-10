@@ -18,9 +18,9 @@ const About = () => {
   }, []);
 
   return domLoaded ? (
-    <Wrapper className='justify-center' id="about" {...getSectionAnimation}>
-      <h2 className="heading-secondary my-11">{title}</h2>
-      <main className="flex flex-col lg:items-start justify-center items-center lg:flex-row gap-28">
+    <Wrapper id="about" {...getSectionAnimation}>
+      <h2 className="heading-secondary my-6">{title}</h2>
+      <main className="flex flex-col lg:items-start justify-center items-center lg:flex-row gap-11">
       <AuthorImage
         frontsrc={img}
         backsrc={backimg}
@@ -29,7 +29,7 @@ const About = () => {
       />
         <div>
       
-        <div className="space-y-2 lg:w-4/5 ">
+        <div className="space-y-2 lg:w-11/12 ">
           <p className='text-primary'>
             Hi, my name is Sumit Nepal, a Graduate student from Butwal Multiple Campus, currently working at software company,{' '}
             <Link

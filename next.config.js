@@ -1,9 +1,5 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  devServer: {
-    host: '0.0.0.0',
-    port: 3000,
-  },
   reactStrictMode: true,
   images: {
     remotePatterns: [

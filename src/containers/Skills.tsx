@@ -14,7 +14,7 @@ const Skills = () => {
     <Wrapper id="skills" {...getSectionAnimation}>
       <h2 className="text-center heading-secondary">{title}</h2>
 
-      <div className="space-y-32">
+      <div className="space-y-24">
         {skills.map(({ id, lottie, softwareSkills, points, title }) => (
           <Skill
             key={id}

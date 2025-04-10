@@ -27,12 +27,12 @@ export default function ThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(
-    typeof window !== 'undefined' &&
-      JSON.parse(localStorage.getItem('darkMode') || 'true')
-      ? true
-      : false
-  );
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    const savedDarkMode = localStorage.getItem('darkMode');
+    setIsDarkMode(savedDarkMode ? JSON.parse(savedDarkMode) : true);
+  }, []);
 
   const toggle = useCallback(() => {
     setIsDarkMode((prev) => !prev);

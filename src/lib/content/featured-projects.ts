@@ -4,22 +4,22 @@ import { getId } from '@/lib/utils/helper';
 const featuredProjectsSection: FeaturedProjectsSectionType = {
   title: "projects i've worked on",
   projects: [
-    {
-      id: getId(),
-      name: 'Trade-Ex',
-      description: 'A second hand book platform.',
-      tasks:
-        "As a cutomer reviwer and designer, I understood the client's requirements and executed a plan to develop and design an e-commerce platform, including the frontend UI, backend setup with database, APIs, and integration with payment platforms.",
-      url: 'https://www.getlifegard.com/',
-      img: '/trade.jpg',
-      tags: [
-        'React JS',
-        'TypeScript',
-        'TailwindCSS',
-        'Firebase',
+    // {
+    //   id: getId(),
+    //   name: 'Trade-Ex',
+    //   description: 'A second hand book platform.',
+    //   tasks:
+    //     "As a cutomer reviwer and designer, I understood the client's requirements and executed a plan to develop and design an e-commerce platform, including the frontend UI, backend setup with database, APIs, and integration with payment platforms.",
+    //   url: 'https://trade-and-exchange.vercel.app/',
+    //   img: '/tradeexlogo.png',
+    //   tags: [
+    //     'React JS',
+    //     'TypeScript',
+    //     'TailwindCSS',
+    //     'Firebase',
     
-      ],
-    },
+    //   ],
+    // },
     {
       id: getId(),
       name: 'Internal Chat Application',
