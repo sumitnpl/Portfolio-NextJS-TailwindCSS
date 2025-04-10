@@ -50,9 +50,8 @@ export const slideIn = ({
       x: 0,
       opacity: 1,
       transition: {
-        type: 'spring',
-        stiffness: 300,
-        damping: 20,
+        type: 'tween',
+        ease: 'easeOut',
         delay,
       },
     },
@@ -101,9 +100,9 @@ export const slideUp = ({
 // * For sections
 
 export const sectionVariants = slideUp({
-  delay: 0.5,
-  duration: 1.75,
-  offset: 50,
+  delay: 0.2,
+  duration: 0.8,
+  offset: 30,
 });
 
 export const getSectionAnimation = {
@@ -124,9 +123,8 @@ export const projectVariants: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: 'spring',
-      stiffness: 150,
-      damping: 20,
+      type: 'tween',
+      ease: 'easeOut',
       delay: 0.2 * i,
       // duration: 0.5,
     },

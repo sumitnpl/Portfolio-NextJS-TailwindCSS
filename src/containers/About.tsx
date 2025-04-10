@@ -21,12 +21,14 @@ const About = () => {
     <Wrapper id="about" {...getSectionAnimation}>
       <h2 className="heading-secondary my-6">{title}</h2>
       <main className="flex flex-col lg:items-start justify-center items-center lg:flex-row gap-11">
-      <AuthorImage
-        frontsrc={img}
-        backsrc={backimg}
-        // size="w-[400px] h-[500px]"
-        alt=""
-      />
+      <div className="w-full lg:w-auto">
+        <AuthorImage
+          frontsrc={img}
+          backsrc={backimg}
+          alt="Sumit Nepal"
+          priority
+        />
+      </div>
         <div>
       
         <div className="space-y-2 lg:w-11/12 ">
@@ -39,14 +41,7 @@ const About = () => {
             >
               vTech Software Solutions
             </Link>
-            .<br /> I'm an Artist as well as crazy UI/UX designer and  who
-            wants to explore everythings.
-            I'm an Artist as well as crazy UI/UX designer and  who
-            wants to explore everythings.
-            I'm an Artist as well as crazy UI/UX designer and  who
-            wants to explore everythings.
-            I'm an Artist as well as crazy UI/UX designer and  who
-            wants to explore everythings.
+            . I'm an Artist as well as crazy UI/UX designer who wants to explore everything.
           </p>
           {/* <p>
             Fast-forward to today, and I've had the privilege of working at a

@@ -8,7 +8,7 @@ type Props = {
   size?: string;     // Custom size (e.g., 'w-[500px] h-[500px]' for larger images)
 };
 
-const AuthorImage = ({ frontsrc, backsrc, alt, size = "w-[1200px] h-[350px]" }: Props) => {
+const AuthorImage = ({ frontsrc, backsrc, alt, size = "w-[1200px] h-[350px]", priority = false }: Props & { priority?: boolean }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -16,10 +16,10 @@ const AuthorImage = ({ frontsrc, backsrc, alt, size = "w-[1200px] h-[350px]" }: 
       className={`relative ${size} rounded-full overflow-hidden`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{ perspective: '1000px' }}  // Adds 3D effect
+      style={{ perspective: '1000px' }}
     >
       <div
-        className="relative w-full h-full transition-transform duration-700 ease-in-out"
+        className="relative w-full h-full transition-transform duration-500 ease-out will-change-transform"
         style={{
           transformStyle: 'preserve-3d',
           transform: isHovered ? 'rotateY(180deg)' : 'rotateY(0deg)',
@@ -36,7 +36,10 @@ const AuthorImage = ({ frontsrc, backsrc, alt, size = "w-[1200px] h-[350px]" }: 
           <Image
             src={frontsrc}
             alt={alt}
-            fill  // Ensures the image fills the parent
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority={priority}
+            quality={90}
             className="object-cover w-full h-full rounded-full"
           />
         </div>
@@ -52,7 +55,10 @@ const AuthorImage = ({ frontsrc, backsrc, alt, size = "w-[1200px] h-[350px]" }: 
           <Image
             src={backsrc}
             alt={alt}
-            fill  // Ensures the image fills the parent
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority={priority}
+            quality={90}
             className="object-cover w-full h-full rounded-full"
           />
         </div>

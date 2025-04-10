@@ -75,10 +75,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <script src="/scripts/no-flash.js" async />
-      </head>
-      <body className={`text-text bg-bg ${fontVariables}`}>
+      <body className={`text-text bg-bg ${fontVariables} antialiased`}>
         <Cursor className="hidden dark:lg:block" />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
