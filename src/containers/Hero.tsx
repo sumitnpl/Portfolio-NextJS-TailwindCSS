@@ -23,8 +23,8 @@ const Hero = () => {
     DEFAULT_ANIMATION_DELAY + increment * i;
 
   return (
-    <Wrapper className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-2 lg:gap-16 min-h-[calc(100vh-4rem)] pt-14 pb-4 sm:pt-20 sm:pb-8 lg:py-0">
-      <div className="w-full lg:w-2/5 flex justify-center lg:justify-end order-1 lg:order-2 -mt-4 sm:mt-0">
+    <Wrapper className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-2 lg:gap-16 min-h-[calc(100vh)] mt-10 pb-4 sm:pt-20 sm:pb-8 lg:py-0">
+      <div className="w-full lg:w-2/5 flex justify-center lg:justify-end order-1 lg:order-2 sm:mt-0">
         <AuthorImage
           frontsrc={img}
           backsrc={backimg}

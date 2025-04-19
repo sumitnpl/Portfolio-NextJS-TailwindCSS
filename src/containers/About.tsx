@@ -32,7 +32,7 @@ const About = () => {
         </div>
         <div className="w-full lg:w-3/5">
           <div className="space-y-4 sm:space-y-5">
-            <p className='text-primary text-sm sm:text-base lg:text-lg leading-relaxed text-left text-justify'>
+            <p className='text-primary text-base leading-relaxed text-justify'>
             {/* hello sumit {' '}
               <Link
                 href="https://vtechsoftwaresolutions.com/"
@@ -50,7 +50,7 @@ const About = () => {
             {list && (
               <div className="mt-4 sm:mt-6 lg:mt-8">
                 <p className="text-base sm:text-lg font-medium mb-3 sm:mb-4 lg:text-left">{list.title}</p>
-                <ul className="grid grid-cols-2 text-xs sm:text-sm lg:text-base w-full max-w-xl lg:max-w-none mx-auto lg:mx-0 lg:pr-8">
+                <ul className="grid grid-cols-2 text-base w-full max-w-xl lg:max-w-none mx-auto lg:mx-0 lg:pr-8">
                   {list.items.map((item) => (
                     <ListItem key={getId()} className="transition-colors duration-200 text-left py-1.5 flex items-center gap-2 before:content-['▹'] before:text-accent before:text-sm">{item}</ListItem>
                   ))}

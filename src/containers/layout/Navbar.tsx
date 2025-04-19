@@ -125,9 +125,9 @@ const Navbar = () => {
       {(navbarCollapsed || windowWidth > md) && (
         <nav className="group-hover:w-full capitalize fixed 
         text-md duration-300 z-50 w-[94%] sm:w-[90%] left-1/2 -translate-x-1/2 
-        top-[4rem] h-auto rounded-lg shadow-lg p-4 sm:p-6 dark:bg-slate-800/95 dark:border-slate-700
+        top-[4rem] h-auto rounded-lg shadow-lg p-4 sm:p-6 bg-slate-100 dark:bg-slate-800/95 dark:border-slate-700
         md:static md:w-auto md:left-auto md:transform-none md:top-auto 
-        md:rounded-none md:shadow-none md:p-0 md:h-auto md:bg-transparent md:border-none">
+        md:rounded-none md:shadow-none md:p-0 md:h-auto md:bg-transparent md:border-none">        
           <ul className="flex flex-col items-stretch gap-2.5 sm:gap-3 list-style-none lg:gap-5 xl:gap-6 md:flex-row md:items-center">
           
             {navLinks.map(({ name, url }, i) => (
