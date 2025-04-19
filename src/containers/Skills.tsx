@@ -11,10 +11,10 @@ const Skills = () => {
   const { isDarkMode } = useTheme();
 
   return (
-    <Wrapper id="skills" {...getSectionAnimation}>
+    <Wrapper id="skills" className="mt-16 sm:mt-20 lg:mt-24" {...getSectionAnimation}>
       <h2 className="text-center heading-secondary">{title}</h2>
 
-      <div className="space-y-24">
+      <div className="mt-8 sm:mt-12 space-y-16 sm:space-y-24">
         {skills.map(({ id, lottie, softwareSkills, points, title }) => (
           <Skill
             key={id}

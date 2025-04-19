@@ -22,7 +22,7 @@ import { useEffect, useState } from 'react';
 
 const hideNavWhileScrolling = ({
   id = 'navbar',
-  offset = 100,
+  offset = 150,
   when = true,
 }: {
   id?: string;
@@ -90,24 +90,13 @@ const Navbar = () => {
       initial="hidden"
       animate="show"
       id="navbar"
-      className="fixed inset-x-0 top-0 right-0 z-50 flex items-end justify-between 
-      px-8 py-4 duration-500 md:px-6 xl:px-12 backdrop-blur-lg"
+      className="fixed inset-x-0 top-0 right-0 z-50 flex items-center justify-between 
+      px-3 sm:px-6 xl:px-12 h-16 duration-500 bg-bg/95 backdrop-blur-md"
+      style={{ transition: 'top 0.3s ease-in-out' }}
     >
-       {/* <h1 className="relative text-2xl capitalize font-custom text-accent group top-1">
-        <Link href="/#hero" className="block">
-        <Image
-      src="../../../public/cropsign.png" // Provide the image path here
-      alt="Your Image Alt Text"
-      width={50} // Specify the width of the image
-      height={50} 
-    />
-         सुमित नेपाल 
-         sumir *
-          <div className="absolute bottom-1.5 left-0 h-[1px] w-0 group-hover:w-full bg-accent duration-300"></div>
-        </Link>
-      </h1> */}
 
-<h1 className="md:absolute lg:absolute capitalize font-signature text-accent group top-3">
+
+<h1 className="capitalize font-signature text-accent group">
   <Link href="/#hero" className="block">
     <div className="relative group">
       <Image
@@ -130,15 +119,16 @@ const Navbar = () => {
           setNavbarCollapsed((prev) => !prev);
         }}
         navbarCollapsed={navbarCollapsed}
-        className="md:invisible"
+        className="md:hidden"
       />
 
       {(navbarCollapsed || windowWidth > md) && (
-        <nav className="group-hover:w-full  drop-shadow-md capitalize absolute 
-        text-md duration-200 md:bg-transparent z-50 w-[90%] left-1/2 -translate-x-1/2 
-        top-full h-max rounded-xl shadow-xl p-6 bg-bg-secondary md:blocks md:static 
-        md:w-auto md:left-auto md:transform-none md:top-auto md:rounded-none md:shadow-none md:p-0 md:h-auto">
-          <ul className="flex flex-col items-stretch gap-3 list-style-none lg:gap-5 xl:gap-6 md:flex-row md:items-center">
+        <nav className="group-hover:w-full capitalize fixed 
+        text-md duration-300 z-50 w-[94%] sm:w-[90%] left-1/2 -translate-x-1/2 
+        top-[4rem] h-auto rounded-lg shadow-lg p-4 sm:p-6 dark:bg-slate-800/95 dark:border-slate-700
+        md:static md:w-auto md:left-auto md:transform-none md:top-auto 
+        md:rounded-none md:shadow-none md:p-0 md:h-auto md:bg-transparent md:border-none">
+          <ul className="flex flex-col items-stretch gap-2.5 sm:gap-3 list-style-none lg:gap-5 xl:gap-6 md:flex-row md:items-center">
           
             {navLinks.map(({ name, url }, i) => (
               <NavItem 

@@ -15,13 +15,19 @@ export type CTAType = {
 };
 
 // env
+export type TaskType = {
+  position: string;
+  duration: string;
+  points: string[];
+};
+
 export type ExperienceType = {
-  role: string;
   company: string;
   companyUrl: string;
-  started: Date | string;
-  upto: Date | 'present' | string;
-  tasks: string[];
+  role: string;
+  started: string;
+  upto: string;
+  tasks: string[] | TaskType[];
 };
 
 export type ProjectType = {

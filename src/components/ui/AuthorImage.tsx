@@ -8,7 +8,7 @@ type Props = {
   size?: string;     // Custom size (e.g., 'w-[500px] h-[500px]' for larger images)
 };
 
-const AuthorImage = ({ frontsrc, backsrc, alt, size = "w-[1200px] h-[350px]", priority = false }: Props & { priority?: boolean }) => {
+const AuthorImage = ({ frontsrc, backsrc, alt, size = "w-full aspect-square max-w-[350px]", priority = false }: Props & { priority?: boolean }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
