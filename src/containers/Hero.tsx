@@ -27,7 +27,7 @@ const Hero = () => {
       <div className="w-full lg:w-2/5 flex justify-center lg:justify-end order-1 lg:order-2 sm:mt-0">
         <AuthorImage
           frontsrc={img}
-          backsrc={backimg}
+          backsrc='/cropsign.jpg'
           size="w-[200px] h-[200px] xs:w-[240px] xs:h-[240px] sm:w-[280px] sm:h-[280px] md:w-[320px] md:h-[320px]"
           alt="Author Image"
           priority
