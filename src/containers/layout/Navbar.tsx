@@ -100,7 +100,7 @@ const Navbar = () => {
   <Link href="/#hero" className="block">
     <div className="relative group">
       <Image
-        src="/cropsign.png" // Provide the image path here
+        src="/cropsign2.png" // Provide the image path here
         alt="Sumit Nepal"
         width={200} // Specify the width of the image
         height={200} 

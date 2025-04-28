@@ -1,3 +1,5 @@
+'use client';
+
 import { FeaturedProjectType } from '@/lib/types';
 import { blurImageURL } from '@/lib/utils/config';
 import { cn } from '@/lib/utils/helper';
@@ -26,46 +28,55 @@ const FeaturedProject = ({
 
   return (
     <motion.div
-      className={cn(
-        'group relative w-full overflow-hidden rounded-xl bg-white border border-gray-200 shadow-md transition-all duration-300 hover:shadow-lg flex flex-col md:flex-row',
-        align === 'right' ? 'md:flex-row-reverse' : 'md:flex-row'
-      )}
       {...rest}
+      className={cn(
+        'group relative w-full max-w-[80%] lg:max-w-[1200px] lg:w-[800px] mx-auto my-10 overflow-hidden rounded-2xl border border-gray-200 shadow-xl dark:shadow-2xl dark:border-neutral-700 transition-all duration-300 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md flex flex-col lg:flex-row',
+        align === 'right' ? 'lg:flex-row-reverse' : 'lg:flex-row'
+      )}
     >
-      {/* Image Section */}
-      <div className="relative w-full md:w-1/2 h-64 md:h-auto overflow-hidden">
+      {/* Image */}
+      <div className="relative w-full lg:w-1/2 h-64 sm:h-80 lg:h-[400px] overflow-hidden">
         <Image
           src={img}
           alt={name}
           fill
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          className="object-cover transition-transform duration-500 group-hover:scale-110"
           placeholder="blur"
           blurDataURL={blurImageURL}
         />
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors z-10" />
         <Link
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute inset-0 z-10"
+          className="absolute inset-0 z-20"
         />
       </div>
 
-      {/* Content Section */}
-      <div className="w-full md:w-1/2 px-6 py-8 space-y-6 text-gray-900">
-        <h2 className="text-2xl font-bold group-hover:text-accent transition-colors">
+      {/* Content */}
+      <div className="w-full lg:w-1/2 px-6 sm:px-8 py-8 space-y-5 sm:space-y-6 text-gray-800 dark:text-gray-200 z-30">
+        {/* Title */}
+        <h2 className="text-2xl sm:text-3xl font-extrabold group-hover:text-accent transition-colors">
           <Link href={url} target="_blank" rel="noopener noreferrer">
             {name}
           </Link>
         </h2>
-        <p className="text-base">{description}</p>
 
-        {/* Tasks */}
+        {/* Description */}
+        <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-primary/90">
+          {description}
+        </p>
+
+        {/* Features */}
         {taskList.length > 0 && (
-          <div className="space-y-2">
-            <p className="font-mono text-sm text-accent">Key Features:</p>
-            <ul className="space-y-1 list-disc list-inside text-primary/70">
+          <div className="space-y-1 sm:space-y-2">
+            <p className="font-mono text-sm sm:text-base text-accent">Key Features:</p>
+            <ul className="list-disc pl-5 text-sm lg:text-base text-primary/70 space-y-1">
               {taskList.map((task, index) => (
-                <li key={index} className="hover:text-primary transition-colors">
+                <li
+                  key={index}
+                  className="hover:text-primary transition-colors duration-200"
+                >
                   {task}
                 </li>
               ))}
@@ -75,11 +86,11 @@ const FeaturedProject = ({
 
         {/* Tags */}
         {tags.length > 0 && (
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 pt-3">
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent"
+                className="rounded-full bg-accent/10 px-4 py-1 text-xs lg:text-sm font-medium text-accent"
               >
                 {tag}
               </span>
@@ -88,24 +99,24 @@ const FeaturedProject = ({
         )}
 
         {/* Links */}
-        <div className="flex items-center gap-4 pt-2">
+        <div className="flex items-center gap-5 pt-4">
           {repo && (
             <Link
               href={repo}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary/60 hover:text-accent transition-colors"
+              className="text-muted hover:text-accent transition-colors"
             >
-              <Icon icon="tabler:brand-github" width={20} />
+              <Icon icon="tabler:brand-github" width={24} />
             </Link>
           )}
           <Link
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary/60 hover:text-accent transition-colors"
+            className="text-muted hover:text-accent transition-colors"
           >
-            <Icon icon="ci:external-link" width={20} />
+            <Icon icon="ci:external-link" width={24} />
           </Link>
         </div>
       </div>

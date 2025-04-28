@@ -20,15 +20,31 @@ const FeaturedProjects = () => {
         </p>
       </div>
 
+      {/* Wrapping projects in flex container */}
       <div className="space-y-6 sm:space-y-8 md:space-y-12">
-        {featuredProjectsSection.projects.map((project, i) => (
-          <FeaturedProject
-            key={project.id}
-            align={i % 2 === 0 ? 'right' : 'left'}
-            {...project}
-            {...getSectionAnimation}
-          />
-        ))}
+        {/* Group the projects in pairs */}
+        {featuredProjectsSection.projects.map((project, i) => {
+          if (i % 2 === 0) {
+            return (
+              <div className="flex flex-wrap gap-6 sm:gap-8 md:gap-12" key={project.id}>
+                {/* Displaying two cards in a row */}
+                <FeaturedProject
+                  align="right"
+                  {...project}
+                  {...getSectionAnimation}
+                />
+                {featuredProjectsSection.projects[i + 1] && (
+                  <FeaturedProject
+                    align="left"
+                    {...featuredProjectsSection.projects[i + 1]}
+                    {...getSectionAnimation}
+                  />
+                )}
+              </div>
+            );
+          }
+          return null; // Only return when i is even to group in pairs
+        })}
       </div>
     </Wrapper>
   );

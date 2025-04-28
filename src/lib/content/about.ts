@@ -16,5 +16,5 @@ export const aboutSection: AboutSectionType = {
     ],
   },
   img: '/sumitnepal.jpg',
-  backimg: '/tictactoe.png',
+  backimg: '/cropsign.jpg',
 };

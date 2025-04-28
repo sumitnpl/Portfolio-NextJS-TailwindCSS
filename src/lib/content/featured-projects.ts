@@ -4,22 +4,22 @@ import { getId } from '@/lib/utils/helper';
 const featuredProjectsSection: FeaturedProjectsSectionType = {
   title: "projects i've worked on",
   projects: [
-    // {
-    //   id: getId(),
-    //   name: 'Trade-Ex',
-    //   description: 'A second hand book platform.',
-    //   tasks:
-    //     "As a cutomer reviwer and designer, I understood the client's requirements and executed a plan to develop and design an e-commerce platform, including the frontend UI, backend setup with database, APIs, and integration with payment platforms.",
-    //   url: 'https://trade-and-exchange.vercel.app/',
-    //   img: '/tradeexlogo.png',
-    //   tags: [
-    //     'React JS',
-    //     'TypeScript',
-    //     'TailwindCSS',
-    //     'Firebase',
+    {
+      id: getId(),
+      name: 'Trade-Ex',
+      description: 'A second hand book platform.',
+      tasks:
+        "As a cutomer reviwer and designer, I understood the client's requirements and executed a plan to develop and design an e-commerce platform, including the frontend UI, backend setup with database, APIs, and integration with payment platforms.",
+      url: 'https://trade-and-exchange.vercel.app/',
+      img: '/tradeexlogo.png',
+      tags: [
+        'React JS',
+        'TypeScript',
+        'TailwindCSS',
+        'Firebase',
     
-    //   ],
-    // },
+      ],
+    },
     {
       id: getId(),
       name: 'Internal Chat Application',
@@ -30,17 +30,17 @@ const featuredProjectsSection: FeaturedProjectsSectionType = {
       img: '/sos.png',
       tags: ['Figma', 'NextJs', 'TypeScript', 'ReactJS', 'Tailwind CSS'],
     },
-    // {
-    //   id: getId(),
-    //   name: 'Velvi Matrimony',
-    //   description:
-    //     'A platform that redefines the way individuals find their life partners.',
-    //   tasks:
-    //     'As a freelancer, I developed this project by planning, communicating with the client, gathering feedback, implementing UI & pages, and integrating real-time data fetching with filtering functionality.',
-    //   url: 'https://velvi.vercel.app/',
-    //   img: 'https://i.postimg.cc/tRS4GvzJ/Screenshot-2024-02-27-at-5-48-49-PM.png',
-    //   tags: ['NextJs', 'TypeScript', 'TailwindCSS', 'APIs'],
-    // },
+    {
+      id: getId(),
+      name: 'Velvi Matrimony',
+      description:
+        'A platform that redefines the way individuals find their life partners.',
+      tasks:
+        'As a freelancer, I developed this project by planning, communicating with the client, gathering feedback, implementing UI & pages, and integrating real-time data fetching with filtering functionality.',
+      url: 'https://velvi.vercel.app/',
+      img: 'https://i.postimg.cc/tRS4GvzJ/Screenshot-2024-02-27-at-5-48-49-PM.png',
+      tags: ['NextJs', 'TypeScript', 'TailwindCSS', 'APIs'],
+    },
     //   {
     //   id: getId(),
     //   name: 'Integra',

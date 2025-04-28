@@ -56,7 +56,7 @@ const AuthorImage = ({ frontsrc, backsrc, alt, size = "w-full aspect-square max-
             src={backsrc}
             alt={alt}
             fill
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(max-width: 700px) 80vw, 20vw"
             priority={priority}
             quality={90}
             className="object-cover w-full h-full rounded-full"
