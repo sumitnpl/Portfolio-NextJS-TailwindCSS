@@ -4,15 +4,15 @@ import { getId } from '@/lib/utils/helper';
 export const projectsSection: ProjectsSectionType = {
   title: 'my projects',
   projects: [
-    // {
-    //   id: getId(),
-    //   name: 'CourseWork',
-    //   url: 'https://easy-fix.vercel.app/',
-    //   repo: 'https://github.com/vatsalsinghkv/easy-fix',
-    //   img: 'https://user-images.githubusercontent.com/68834718/258852895-df5c6da7-a698-40fb-97c3-a5474314cb85.png',
-    //   year: 2023,
-    //   tags: ['React', 'Tailwind'],
-    // },
+    {
+      id: getId(),
+      name: 'WS Cubetech',
+      url: 'https://wscubetech-orcin.vercel.app/',
+      repo: 'https://github.com/sumitnpl/responsive-website-reactandtailwind',
+      img: '/wscubetech.png',
+      year: 2023,
+      tags: ['React', 'Tailwind'],
+    },
     {
       id: getId(),
       name: 'Tic Tac Toe',
@@ -29,7 +29,7 @@ export const projectsSection: ProjectsSectionType = {
       repo: 'https://github.com/Sciever-Inc/repo-games',
       img: '/gamescollection.png',
       year: 2024,
-      tags: ['CSS Animations', 'Sass'],
+      tags: ['React', 'Tailwind'],
     },
     // {
     //   id: getId(),
