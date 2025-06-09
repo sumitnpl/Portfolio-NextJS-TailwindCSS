@@ -21,7 +21,6 @@ const FeaturedProject = ({
   tags,
   ...rest
 }: Props) => {
-  const taskList = tasks.split(',').map((task) => task.trim());
 
   return (
     <div className="px-4 sm:px-1 mb-8">
