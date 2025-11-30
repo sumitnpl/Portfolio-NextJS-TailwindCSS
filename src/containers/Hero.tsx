@@ -13,7 +13,7 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   const { cta, subtitle, title, tagline, description, specialText } =
     heroSection;
-    const {  backimg,img} = aboutSection;
+    const { backimg,img} = aboutSection;
 
   const windowWidth = useWindowWidth();
   const md = getBreakpointsWidth('md');

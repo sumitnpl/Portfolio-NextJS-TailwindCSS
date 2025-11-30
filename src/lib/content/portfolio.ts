@@ -1,8 +1,3 @@
-/*
- * =========================
- * AUTHOR INFO
- * =========================
- */
 
 import { StringKeyValueType } from '../types';
 
@@ -20,7 +15,7 @@ export const author = {
 };
 
 export const seoData = {
-  title: 'Sumit Nepal | FRONTEND DEVELOPER ',
+  title: 'PORTFOLIO | SUMIT NEPAL',
   description:
     'Sumit Nepal is a front-end developer who specializes in building (and occasionally designing) exceptional visual interfaces.',
   author: author.name,
